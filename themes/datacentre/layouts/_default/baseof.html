@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ block "title" . }}{{ site.Title }}{{ end }}</title>
+	<meta name="description" content="{{ site.Params.description }}">
+	<link rel="canonical" href="{{ .Permalink }}">
+	<meta property="og:type" content="{{ block "ogtype" . }}website{{ end }}">
+	<meta property="og:title" content="{{ block "ogtitle" . }}{{ .Title }}{{ end }}">
+	<meta property="og:description" content="{{ site.Params.description }}">
+	<meta property="og:url" content="{{ .Permalink }}">
+	<meta property="og:site_name" content="{{ site.Title }}">
+	<meta name="twitter:card" content="summary">
+	{{ with .Params.images }}<meta property="og:image" content="{{ index . 0 | absURL }}">{{ end }}
+	{{ range .AlternativeOutputFormats }}
+	<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ site.Title }}">
+	{{ end }}
+	{{- $css := slice (resources.Get "css/main.css") (resources.Get "css/syntax.css") | resources.Concat "css/site.css" }}
+	{{- if hugo.IsProduction }}{{ $css = $css | minify | fingerprint }}{{ end }}
+	<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;650;750;800&family=JetBrains+Mono:wght@400&display=swap">
+	{{ block "headextra" . }}{{ end }}
+</head>
+<body>
+	{{ partial "nav.html" . }}
+	{{ block "main" . }}{{ end }}
+	{{ block "scriptsextra" . }}{{ end }}
+</body>
+</html>

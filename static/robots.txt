@@ -1,0 +1,7 @@
+Sitemap: https://www.simonmott.co.uk/sitemap.xml
+
+User-agent: *
+Disallow: /*?*
+
+User-agent: Amazonbot
+Disallow: /

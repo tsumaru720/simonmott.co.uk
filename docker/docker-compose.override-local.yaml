@@ -1,0 +1,6 @@
+services:
+  web:
+    networks: !reset []
+    labels: !reset []
+    ports: !override
+      - "8999:80"

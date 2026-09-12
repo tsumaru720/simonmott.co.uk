@@ -1,0 +1,6 @@
+services:
+  web:
+    labels: !override
+      com.chameth.vhost: "dev.simonmott.co.uk"
+    volumes: !override
+      - "./data/dev-robots.txt:/usr/share/nginx/html/robots.txt"

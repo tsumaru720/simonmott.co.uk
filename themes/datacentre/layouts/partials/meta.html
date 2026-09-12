@@ -1,0 +1,3 @@
+{{- $page := .page -}}
+{{- $linked := .linked -}}
+<time datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "2 Jan 2006" }}</time>{{ with $page.GetTerms "categories" }}{{ range . }}<span class="tag">{{ if $linked }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ else }}{{ .LinkTitle }}{{ end }}</span>{{ end }}{{ end }}

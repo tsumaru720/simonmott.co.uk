@@ -1,0 +1,22 @@
+{{ define "title" }}{{ .Title }} - {{ site.Title }}{{ end }}
+
+{{ define "main" }}
+{{ $pages := .RegularPages }}
+{{- range .Sections }}
+  {{- $pages = $pages | union .RegularPages }}
+{{- end }}
+<main class="wrap">
+	<h1 style="margin: 2.5rem 0 0.5rem;">{{ .Title }}</h1>
+
+	<ul class="archive-list">
+		{{- range $pages.ByDate.Reverse }}
+		<li>
+			<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+			<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+		</li>
+		{{- end }}
+	</ul>
+
+	{{ with .Parent }}{{ if not .IsHome }}<p><a href="{{ .RelPermalink }}">Back to {{ .Title }}</a></p>{{ end }}{{ end }}
+</main>
+{{ end }}

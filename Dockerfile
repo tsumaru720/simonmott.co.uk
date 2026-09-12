@@ -1,0 +1,13 @@
+FROM ghcr.io/gohugoio/hugo:v0.166.0 AS build
+
+WORKDIR /src
+COPY . .
+USER root
+RUN rm -rf public && hugo --gc --minify --environment production
+
+FROM nginx:1.31-alpine
+
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /src/public /usr/share/nginx/html
+
+EXPOSE 80

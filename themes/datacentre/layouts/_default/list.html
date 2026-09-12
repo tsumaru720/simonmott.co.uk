@@ -1,0 +1,23 @@
+{{ define "title" }}{{ .Title }} - {{ site.Title }}{{ end }}
+
+{{ define "main" }}
+{{ $pag := .Paginate .Pages }}
+<main class="wrap">
+	<h1 style="margin: 2.5rem 0 0.5rem;">{{ .Title }}</h1>
+
+	<ul class="post-list">
+		{{- range $pag.Pages }}
+		<li>
+			<article>
+				<a href="{{ .RelPermalink }}">
+					<h2>{{ .Title }}</h2>
+					{{ if .Date }}<div class="meta">{{ partial "meta.html" (dict "page" . "linked" false) }}</div>{{ end }}
+				</a>
+			</article>
+		</li>
+		{{- end }}
+	</ul>
+
+	{{ partial "pagination.html" $pag }}
+</main>
+{{ end }}

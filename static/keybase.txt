@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/tsumaru720
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.simonmott.co.uk
+  * I am tsumaru720 (https://keybase.io/tsumaru720) on keybase.
+  * I have a public key with fingerprint 4CDC BA5E 1F90 372B 0AF5  55B2 34BC 7CD5 BEC3 5515
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01014069b10fb0fb5222e6592e4b68c17786a6f2623f5efea63da36ae0971587da170a",
+            "fingerprint": "4cdcba5e1f90372b0af555b234bc7cd5bec35515",
+            "host": "keybase.io",
+            "key_id": "34bc7cd5bec35515",
+            "kid": "01014069b10fb0fb5222e6592e4b68c17786a6f2623f5efea63da36ae0971587da170a",
+            "uid": "38fffade3ecc7caddf7bbb7a16975519",
+            "username": "tsumaru720"
+        },
+        "service": {
+            "hostname": "www.simonmott.co.uk",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1470930738,
+    "expire_in": 157680000,
+    "prev": "c1307d40f80126039d0af3a7aab5d2921ae0e1443e815cf8d9224f702a909af5",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.55
+Comment: https://keybase.io/crypto
+
+yMIwAnicrVJZSBVRGL62SEm2EthCxVCEpXbOmeXM3HaiqIgKosXMbufMnNHhLnOd
+mXtvqSGtWEQoFVk9tGqQGdVDJWartL8IPahFUhkUtEkL9SB2xuqtxw4HDufn+7/v
++5eWzP6BjLSpn95+C799tzjt8e0TicDa88dRmUBtY4sQLBPCrO9hEYO5XihsGUJQ
+ABBACSgahcCk/MoIIabIGmISVVQdYqwqRDGRgkRTZiYjimgQUSEMaBjKKjYIxIAI
+OYJpxYqYE3esmMdpJd3QKZEZNDUgYkQBMWVZpkiUqI51Q6ZMF2UZyjyx2Hb9DG6O
+EpflWTaP8U+oz94/8P/Zd+K3jmqaJjGYyHSuRwzDxJRSTKCiYa6r+UCXOTESZRzt
+uYkocRIYAWFrjsDjSUtnfmv9Wv5gUqlUnmtF7VjU9rw83c5LhDlJ3LE9W7cjHFDs
+eXE36BN4W+J9GYyG/nCFqBUzeEN5RpI5rmXHhCDkSN2zfHIoYaCJAItqjsA2xy2H
+hSwfIWNFBfz4OizJKXXIUYYETBVApABRM/ggRIIJobKBNAR5PxiUJJGpUNZN1dAQ
+kkwMENGAxkcm+NWVxGwhiLlNUsQpXasoRryEw4Std25tGBBIywikD+znL1ogY/Dw
+v+u35tKgwIXpZ0eM6thbc2/4+MbGqtxFl59e7ah4Un1SHDfkxrkvs63WqkmTa9Ch
+gmwnf33nZ6WgPF8taK//+KCtX++qhle3mrPXtVzfvqPhecX7ccnS9Oa6MekkrC1p
+nQh73jwbUBspW5A1q36/05s19EDm67ajqftZM3btWZHW2fRqeTYeUbvxWleP8/I0
+PFKz6UVT9bGSmZ9LbjdVtu8srKy7+Wb+5pa50rAf0x4Vfq8cHaQvIvva5mzDuRVn
+Mhc+6To8rLCgu3TpkCs9Q+9OST4cGYgqxbv1xKLOD0lp8oTIoZ/zVibrKsqP9nY7
+Xfj9xfZo/96xBxd3r26Jfo03TLmwtnnZqVRuYU/3LynjSgI=
+=vLV1
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/tsumaru720
+
+==================================================================

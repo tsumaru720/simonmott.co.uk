@@ -1,0 +1,69 @@
+baseURL = 'https://www.simonmott.co.uk/'
+languageCode = 'en-gb'
+title = 'Simon Mott'
+theme = 'datacentre'
+
+[taxonomies]
+category = 'categories'
+tag = 'tags'
+
+[permalinks.term]
+categories = '/category/:slug/'
+tags = '/tag/:slug/'
+
+[permalinks.taxonomy]
+categories = '/category/'
+tags = '/tag/'
+
+[pagination]
+pagerSize = 10
+
+[markup]
+[markup.highlight]
+codeFences = true
+noClasses = false
+style = 'tokyonight-night'
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[outputs]
+home = ['HTML', 'RSS', 'SearchIndex']
+section = ['HTML']
+taxonomy = ['HTML']
+term = ['HTML']
+page = ['HTML']
+
+[outputFormats.SearchIndex]
+mediaType = 'application/json'
+baseName = 'search'
+
+[services.rss]
+limit = -1
+
+[params]
+description = 'All about me'
+headerImage = '/images/2016/06/header.jpg'
+
+[menus]
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+#[[menus.main]]
+#name = 'Popular'
+#url = '#'
+#weight = 20
+#
+#[[menus.main]]
+#name = 'LVM'
+#pageRef = '/2010/03/logical-volume-manager-lvm/'
+#parent = 'Popular'
+#weight = 21
+#
+#[[menus.main]]
+#name = 'VPN Bonding'
+#pageRef = '/2012/03/vpn-bonding/'
+#parent = 'Popular'
+#weight = 22

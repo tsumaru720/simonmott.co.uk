@@ -1,0 +1,8 @@
+name = "Datacentre"
+description = "Dark datacentre theme for simonmott.co.uk"
+license = "MIT"
+min_version = "0.128.0"
+
+[author]
+name = "Simon Mott"
+homepage = "https://www.simonmott.co.uk/"

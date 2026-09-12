@@ -1,0 +1,1 @@
+{{- $d := int (.Format "2") -}}{{- $s := "th" -}}{{- if and (ne $d 11) (ne $d 12) (ne $d 13) -}}{{- if eq (mod $d 10) 1 -}}{{- $s = "st" -}}{{- else if eq (mod $d 10) 2 -}}{{- $s = "nd" -}}{{- else if eq (mod $d 10) 3 -}}{{- $s = "rd" -}}{{- end -}}{{- end -}}{{- printf "%d%s %s %d" $d $s (.Format "January") (int (.Format "2006")) -}}

@@ -1,0 +1,33 @@
+{{ define "title" }}{{ site.Title }}{{ end }}
+
+{{ define "main" }}
+{{ $pag := .Paginate (where site.RegularPages "Type" "!=" "search") }}
+
+{{ if eq $pag.PageNumber 1 }}
+<div class="hero">
+	<img src="{{ site.Params.headerImage | relURL }}" alt="{{ site.Title }} — {{ site.Params.description }}">
+	<div class="hero-text">
+		<h1>{{ site.Title }}</h1>
+		<p>Occasional write-ups of things I've broken, fixed, or wired together.</p>
+	</div>
+</div>
+{{ end }}
+
+<main class="wrap">
+	<ul class="post-list">
+		{{- range $pag.Pages }}
+		<li>
+			<article>
+				{{- with .Params.images }}{{ with index . 0 }}<img class="post-thumb" src="{{ . | relURL }}" alt="">{{ end }}{{ end }}
+				<h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+				<div class="meta">{{ partial "meta.html" (dict "page" . "linked" false) }}</div>
+				<div class="post-summary">{{ .Summary }}</div>
+				{{- if .Truncated }}<a class="read-more" href="{{ .RelPermalink }}">Read more <span aria-hidden="true">&rarr;</span></a>{{ end }}
+			</article>
+		</li>
+		{{- end }}
+	</ul>
+
+	{{ partial "pagination.html" $pag }}
+</main>
+{{ end }}

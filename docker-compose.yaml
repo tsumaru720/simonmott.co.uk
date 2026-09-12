@@ -1,0 +1,14 @@
+networks:
+  infrastructure_proxy:
+    external: true
+
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    networks:
+      - "infrastructure_proxy"
+    environment:
+      TZ: "Europe/London"
+    labels:
+      com.chameth.vhost: "simonmott.co.uk www.simonmott.co.uk smott.co.uk www.smott.co.uk agari.co"

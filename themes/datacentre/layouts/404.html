@@ -1,0 +1,9 @@
+{{ define "title" }}Page not found - {{ site.Title }}{{ end }}
+
+{{ define "main" }}
+<main class="wrap">
+	<h1 style="margin: 2.5rem 0 0.5rem;">404</h1>
+	<p class="intro" style="margin-top: 0;">That page doesn't exist — it may have been moved or deleted.</p>
+	<p><a href="{{ site.Home.RelPermalink }}">Back to the home page</a></p>
+</main>
+{{ end }}

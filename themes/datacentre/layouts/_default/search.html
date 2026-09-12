@@ -1,0 +1,20 @@
+{{ define "title" }}Search - {{ site.Title }}{{ end }}
+
+{{ define "main" }}
+<main class="wrap">
+	<h1 style="margin: 2.5rem 0 0.5rem;">Search</h1>
+
+	{{ partial "searchform.html" . }}
+
+	<p id="search-count" class="intro" style="margin-top: 0;"></p>
+	<div id="search-results">
+		<p class="intro" style="margin-top: 0;">Type a term in the box above to search the site.</p>
+	</div>
+</main>
+{{ end }}
+
+{{ define "scriptsextra" }}
+{{- $js := resources.Get "js/search.js" }}
+{{- if hugo.IsProduction }}{{ $js = $js | minify | fingerprint }}{{ end }}
+<script src="{{ $js.RelPermalink }}" defer></script>
+{{ end }}
