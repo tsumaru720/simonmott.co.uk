@@ -1,5 +1,8 @@
 services:
   web:
+    build:
+      args:
+        ENVIRONMENT: development
     labels: !override
       com.chameth.vhost: "dev.simonmott.co.uk"
     volumes: !override

@@ -3,7 +3,8 @@ FROM ghcr.io/gohugoio/hugo:v0.166.0 AS build
 WORKDIR /src
 COPY . .
 USER root
-RUN rm -rf public && hugo --gc --minify --environment production
+ARG ENVIRONMENT=development
+RUN rm -rf public && hugo --gc --minify --environment "${ENVIRONMENT}"
 
 FROM nginx:1.31-alpine
 

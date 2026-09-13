@@ -22,6 +22,12 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;650;750;800&family=JetBrains+Mono:wght@400&display=swap">
+
+	{{ if eq hugo.Environment "production" }}
+	<script src="//www.googletagmanager.com/gtag/js?id=G-1PFP1B38F5" async></script>
+	<script defer src="https://stats.simonmott.co.uk/script.js" data-website-id="3bb04009-e23b-4f25-98a4-d3d308967f40"></script>
+	{{ end }}
+
 	{{ block "headextra" . }}{{ end }}
 </head>
 <body>

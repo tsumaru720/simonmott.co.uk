@@ -4,7 +4,10 @@ networks:
 
 services:
   web:
-    build: .
+    build:
+      context: .
+      args:
+        ENVIRONMENT: production
     restart: unless-stopped
     networks:
       - "infrastructure_proxy"

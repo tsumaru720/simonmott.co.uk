@@ -1,5 +1,8 @@
 services:
   web:
+    build:
+      args:
+        ENVIRONMENT: development
     networks: !reset []
     labels: !reset []
     ports: !override
