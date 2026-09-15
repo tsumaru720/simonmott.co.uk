@@ -5,5 +5,5 @@ services:
         ENVIRONMENT: development
     labels: !override
       com.chameth.vhost: "dev.simonmott.co.uk"
-    volumes: !override
+    volumes:
       - "./data/dev-robots.txt:/usr/share/nginx/html/robots.txt"

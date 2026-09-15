@@ -13,5 +13,7 @@ services:
       - "infrastructure_proxy"
     environment:
       TZ: "Europe/London"
+    volumes:
+      - "./nginx-overrides:/etc/nginx/overrides.d"
     labels:
       com.chameth.vhost: "simonmott.co.uk www.simonmott.co.uk smott.co.uk www.smott.co.uk agari.co"
